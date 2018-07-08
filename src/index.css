@@ -1,20 +1,33 @@
-body, html, #root, div {
-  position: absolute;
+body, html, #root {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   width: 100%;
   height: 100%;
   user-select: none;
-}
-
-div {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
-canvas {
-  border: 1px solid grey;
-  cursor: none; 
+#Matrix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 800px;
+}
+
+.row {
+  width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
 }

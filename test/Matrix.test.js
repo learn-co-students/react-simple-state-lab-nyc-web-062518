@@ -8,11 +8,10 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-import * as canvasHelpers from '../src/canvasHelpers.js'
-import ChromeBoisDomain from '../src/ChromeBoisDomain'
+import Matrix from '../src/Matrix'
 
 
-describe('<ChromeBoisDomain />', () => {
+describe('<Matrix />', () => {
   
   const drawChromeBoiAtCoords = sinon.stub(canvasHelpers, "drawChromeBoiAtCoords")
   const toggleCycling = sinon.stub(canvasHelpers, "toggleCycling")

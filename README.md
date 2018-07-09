@@ -28,6 +28,7 @@ responsible React developers, we want to make sure we have a default grid in
 case no `values` prop is passed.
 
 1. Make a default `values` prop for `Matrix`, which is a 10x10 array filled with the values '#F00' (red). For inspiration, take a look at `src/data.js`.
+2. Once you have made your `<Cell />` component, replace the return value in `genRow`'s map to: `<Cell value={val} />`
 
 #### `Cell`
 
@@ -40,12 +41,12 @@ single `state` value: `color`, (which will be a 3 digit hex value i.e. '#FFF').
 ```js
 constructor(props) {
   super(props)
-  // ...set initial state
+  // ...define initial state with a key of 'color' set to the 'value' prop
 }
 ```
 
 2. `Cell` should render a single `<div>` with a className of `cell`
-3. In render, the cell should set the background color in-line for the `<div>` by adding the following attribute: `style={{backgroundColor: '#FFF'}}` ('#FFF' is just used as an example value here - the value should be the `state.color`
+3. In render, the cell should set the background color in-line for the `<div>` by adding the following attribute: `style={{backgroundColor: '#FFF'}}` ('#FFF' is just used as an example value here - the value should be state's color)
 4. Create a click listener which, when activated, updates the state to the following hex value: '#333'
 
 #### Once Finished

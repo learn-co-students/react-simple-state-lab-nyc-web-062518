@@ -5,13 +5,13 @@ export default class Cell extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      value: this.props.value
+      color: this.props.value
     }
   }
   
   handleClick = () => {
     this.setState({
-      value: '#333'
+      color: '#333'
     })
   }
   
@@ -19,7 +19,7 @@ export default class Cell extends Component {
     return (
       <div 
         className="cell"
-        style={{backgroundColor: this.state.value}}
+        style={{backgroundColor: this.state.color}}
         onClick={this.handleClick}>
       </div>
     )

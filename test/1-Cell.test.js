@@ -13,7 +13,7 @@ configure({ adapter: new Adapter() });
 describe('<Cell />', () => {
   
   try {
-    var Cell = require('../src/Cell')  
+    var Cell = require('../src/Cell').default
   } catch(e) {
     if (e.code === 'MODULE_NOT_FOUND') {
       console.log("Have you exported your <Cell /> component?");

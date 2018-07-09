@@ -8,10 +8,19 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-import Cell from '../src/Cell'
 
 
 describe('<Cell />', () => {
+  
+  try {
+    var Cell = require('../src/Cell')  
+  } catch(e) {
+    if (e.code === 'MODULE_NOT_FOUND') {
+      console.log("Have you exported your <Cell /> component?");
+      it("is exported", () => {expect(false).to.equal(true)})
+      return
+    }
+  }
   
   let cellWhite
   

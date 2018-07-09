@@ -13,7 +13,13 @@ import Matrix from '../src/Matrix'
 
 describe('<Matrix />', () => {
   
-  const defRows = Matrix.defaultProps.values
+  try {
+    var defRows = Matrix.defaultProps.values
+  } catch(e) {
+    console.log("Don't forget to set default props in Matrix!\n\n");
+    it("defines Matrix.defaultProps", () => {expect(false).to.equal(true)})
+    return
+  }
   
   it("uses a default 'values' prop of an array with 10 items", () => {
     expect(defRows.length).to.equal(10)
